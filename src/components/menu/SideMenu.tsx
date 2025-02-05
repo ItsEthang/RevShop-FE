@@ -9,7 +9,7 @@ const SideMenu = () => {
       direction="column"
       align="center"
       justify="between"
-      className="h-screen w-45 fixed bg-blue-200 py-6"
+      className="h-screen w-45 fixed bg-blue-300 py-6"
     >
       <Logo />
       <Options />
