@@ -1,13 +1,8 @@
-import { Button, Flex, Text } from "@radix-ui/themes";
 import "./App.css";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
-  return (
-    <Flex direction="column" gap="2">
-      <Text>Hello from Radix Themes :)</Text>
-      <Button>Let's go</Button>
-    </Flex>
-  );
+  return <ProductPage />;
 }
 
 export default App;
