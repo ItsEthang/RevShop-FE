@@ -9,7 +9,7 @@ const useCategory = () => {
     return res.data;
   };
   return useQuery<Category[], Error>({
-    queryKey: ["category"],
+    queryKey: ["categories"],
     queryFn: getCategory,
     retry: 3,
     staleTime: ms("1h"),
