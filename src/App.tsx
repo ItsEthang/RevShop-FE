@@ -1,7 +1,13 @@
+import { Button, Flex, Text } from "@radix-ui/themes";
 import "./App.css";
 
 function App() {
-  return <h1>Hello Jiik Shop!</h1>;
+  return (
+    <Flex direction="column" gap="2">
+      <Text>Hello from Radix Themes :)</Text>
+      <Button>Let's go</Button>
+    </Flex>
+  );
 }
 
 export default App;
