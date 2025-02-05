@@ -5,7 +5,7 @@ const ProductPage = () => {
   return (
     <>
       <SideMenu />
-      <Box className="ml-50">
+      <Box className="ml-45">
         <Box className="bg-slate-200 h-20">Navbar</Box>{" "}
         <Box className="bg-black">Content</Box>
       </Box>
