@@ -1,7 +1,8 @@
 import "./App.css";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
-  return <h1>Hello Jiik Shop!</h1>;
+  return <ProductPage />;
 }
 
 export default App;
