@@ -23,7 +23,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           <img
             src={product.imageUrl}
             alt={product.name}
-            className="object-cover h-50 w-full rounded-md"
+            className="object-cover h-50 w-full rounded-md border-1 border-solid border-black"
           />
         </Box>
         <Text
