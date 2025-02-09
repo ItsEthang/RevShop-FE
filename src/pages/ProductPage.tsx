@@ -8,7 +8,7 @@ const ProductPage = () => {
   return (
     <>
       <SideMenu />
-      <Box className="ml-45 bg-amber-100 h-screen">
+      <Box className="ml-45 bg-foblue-300 h-screen">
         <Navbar />
         <Box className="p-10 ">
           <CategoryFilter />

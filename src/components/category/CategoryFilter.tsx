@@ -20,6 +20,7 @@ const CategoryFilter = () => {
       <Flex gap="6" align="center">
         {categories.map((category) => (
           <Avatar
+            className="border-1 border-solid border-slate-black"
             key={category.id}
             size="4"
             radius="full"

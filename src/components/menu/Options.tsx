@@ -1,4 +1,4 @@
-import { Box, Button, Flex } from "@radix-ui/themes";
+import { Box, Button, Flex, Text } from "@radix-ui/themes";
 import { AiOutlineProduct } from "react-icons/ai";
 import { GrFavorite } from "react-icons/gr";
 import { MdOutlineHistory } from "react-icons/md";
@@ -7,12 +7,12 @@ const Options = () => {
   return (
     <Flex direction="column" align="center" gap="5">
       <Flex direction="column" align="center">
-        <Button>
+        <Button variant="solid">
           <Box className="px-4">
             <AiOutlineProduct />
           </Box>
         </Button>
-        Products
+        <Text weight="bold">Products</Text>
       </Flex>
       <Flex direction="column" align="center">
         <Button>
@@ -20,7 +20,7 @@ const Options = () => {
             <MdOutlineHistory />
           </Box>
         </Button>
-        History
+        <Text weight="bold">History</Text>
       </Flex>
       <Flex direction="column" align="center">
         <Button>
@@ -28,7 +28,7 @@ const Options = () => {
             <GrFavorite />
           </Box>
         </Button>
-        Favorites
+        <Text weight="bold">Favorites</Text>
       </Flex>
     </Flex>
   );
