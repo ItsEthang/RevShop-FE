@@ -7,7 +7,7 @@ const ProductCard = ({ product }: { product: Product }) => {
   return (
     <Box
       key={product.id}
-      className="border-solid border-2 border-zinc-200  bg-sky-100 rounded-lg p-5"
+      className="bg-foyellow-700 rounded-lg p-5 border-1 border-solid border-black"
     >
       <Flex direction="column" gap="3">
         <ProductStockBadge

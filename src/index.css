@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-foblue-300: #82a7d6;
+  --color-foblue-500: #447ab9;
+  --color-foblue-700: #325886;
+  --color-foyellow-300: #feeed4;
+  --color-foyellow-500: #fce8a4;
+  --color-foyellow-700: #fef265;
+}
