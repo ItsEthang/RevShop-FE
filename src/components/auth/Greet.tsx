@@ -18,7 +18,7 @@ const Greet = () => {
         <Flex
           align="center"
           gap="3"
-          className="bg-foblue-300 p-6 rounded-lg hover:bg-foblue-500 cursor-pointer"
+          className="bg-foblue-300 p-6 rounded-lg hover:bg-foblue-500 cursor-pointer border-1 border-solid border-black"
           width="350px"
         >
           <FaCartShopping />
@@ -28,7 +28,7 @@ const Greet = () => {
         <Flex
           align="center"
           gap="3"
-          className="bg-foblue-300 p-6 rounded-lg hover:bg-foblue-500 cursor-pointer"
+          className="bg-foblue-300 p-6 rounded-lg hover:bg-foblue-500 cursor-pointer border-1 border-solid border-black"
           width="350px"
         >
           <MdSell />
