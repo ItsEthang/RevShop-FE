@@ -9,6 +9,7 @@ import ErrorCallout from "./ErrorCallout";
 import ErrorMessage from "./ErrorMessage";
 import InputBox from "./InputBox";
 import LinkText from "./LinkText";
+import useSignIn from "react-auth-kit/hooks/useSignIn";
 
 interface Inputs {
   username: string;
@@ -20,6 +21,7 @@ interface Token {
 }
 
 const Login = ({ role }: { role: Role }) => {
+  const signIn = useSignIn();
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [isSubmitting, setSubmitting] = useState(false);
@@ -34,6 +36,15 @@ const Login = ({ role }: { role: Role }) => {
       const response = await apiClient.post<Token>("/auth/login", data);
       console.log(response.data.token);
       navigate("/products");
+      signIn({
+        auth: {
+          token: response.data.token,
+          type: "Bearer",
+        },
+        userState: {
+          username: data.username,
+        },
+      });
     } catch {
       setError("Due to an error. You cannot login at this time");
     } finally {
