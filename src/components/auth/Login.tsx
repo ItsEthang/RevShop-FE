@@ -34,7 +34,6 @@ const Login = ({ role }: { role: Role }) => {
     try {
       setSubmitting(true);
       const response = await apiClient.post<Token>("/auth/login", data);
-      console.log(response.data.token);
       navigate("/products");
       signIn({
         auth: {
