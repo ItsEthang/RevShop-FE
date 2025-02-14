@@ -1,4 +1,5 @@
 import { Box, Flex, Text } from "@radix-ui/themes";
+import { Link } from "react-router-dom";
 import { Product } from "../../dto/Dto";
 import ProductStockBadge from "./ProductStockBadge";
 import AddToCart from "./AddToCart";
@@ -20,11 +21,13 @@ const ProductCard = ({ product }: { product: Product }) => {
           width="100%"
           height={{ initial: "300px", md: "250px", lg: "200px" }}
         >
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            className="object-cover h-50 w-full rounded-md border-1 border-solid border-black"
-          />
+          <Link to={`/products/${product.id}`} className="block">
+            <img
+              src={product.imageUrl}
+              alt={product.name}
+              className="object-cover h-50 w-full rounded-md border-1 border-solid border-black"
+            />
+          </Link>
         </Box>
         <Text
           as="div"
