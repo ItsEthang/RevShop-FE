@@ -5,6 +5,7 @@ import AuthLayout from "../pages/AuthLayout";
 import ProductPage from "../pages/ProductPage";
 import RequireAuth from "@auth-kit/react-router/RequireAuth";
 import { Role } from "../enums";
+import ProductDetailPage from "../pages/ProductDetailPage";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,14 @@ const router = createBrowserRouter([
       </RequireAuth>
     ),
   },
+  {
+    path: "/products/:id",
+    element:(
+      <RequireAuth fallbackPath={"/"}>
+        <ProductDetailPage />
+      </RequireAuth>
+    )
+  }
 ]);
 
 export default router;

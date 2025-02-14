@@ -14,3 +14,12 @@ export interface Product {
   imageUrl: string;
   category: string;
 }
+
+export interface Review {
+  id: number;
+  productId: number;
+  buyerId: number;
+  rating: number;
+  comment: string;
+  reviewDate: string;
+}
