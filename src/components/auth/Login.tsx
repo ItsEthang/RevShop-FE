@@ -10,6 +10,7 @@ import ErrorMessage from "./ErrorMessage";
 import InputBox from "./InputBox";
 import LinkText from "./LinkText";
 import useSignIn from "react-auth-kit/hooks/useSignIn";
+import { jwtDecode } from "jwt-decode";
 
 interface Inputs {
   username: string;
@@ -34,7 +35,11 @@ const Login = ({ role }: { role: Role }) => {
     try {
       setSubmitting(true);
       const response = await apiClient.post<Token>("/auth/login", data);
-      navigate("/products");
+      const token = response.data.token;
+
+      const decoded: any = jwtDecode(token);
+      const buyerId = decoded.id;
+
       signIn({
         auth: {
           token: response.data.token,
@@ -42,8 +47,11 @@ const Login = ({ role }: { role: Role }) => {
         },
         userState: {
           username: data.username,
+          buyerId: buyerId,
         },
       });
+
+      navigate("/products");
     } catch {
       setError("Due to an error. You cannot login at this time");
     } finally {
